@@ -1,109 +1,405 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Masterclass: Mastering Challenging American English Sounds</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masterclass: Master Challenging American English Sounds</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for the Inter font and overall body background */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #000000; /* Ensuring black background */
-            min-height: 100vh; /* Ensure body takes full viewport height */
+            background-color: #050816; /* A richer, dark blue-black */
+            color: #e2e8f0; /* A soft off-white for better readability */
         }
+
+        .hero-gradient-text {
+            background: linear-gradient(to right, #60a5fa, #3b82f6, #93c5fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Style for the new signature */
+        .signature-font {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .cta-button {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .cta-button:hover {
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.5);
+            transform: translateY(-3px) scale(1.05);
+        }
+        
+        .feature-card, .testimonial-card {
+            background: rgba(17, 24, 39, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover, .testimonial-card:hover {
+            border-color: rgba(96, 165, 250, 0.5);
+            transform: translateY(-5px);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+
+        .background-blobs {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.15;
+        }
+
+        .blob-1 {
+            background: #3b82f6;
+            width: 400px;
+            height: 400px;
+            top: -150px;
+            left: -150px;
+            animation: move-blob-1 15s infinite alternate;
+        }
+
+        .blob-2 {
+            background: #8b5cf6;
+            width: 300px;
+            height: 300px;
+            bottom: -100px;
+            right: -100px;
+            animation: move-blob-2 20s infinite alternate;
+        }
+
+        @keyframes move-blob-1 {
+            from { transform: translate(0, 0) scale(1); }
+            to { transform: translate(100px, 50px) scale(1.2); }
+        }
+        @keyframes move-blob-2 {
+            from { transform: translate(0, 0) scale(1); }
+            to { transform: translate(-80px, -60px) scale(0.8); }
+        }
+
     </style>
 </head>
-<body class="bg-black text-white p-6 md:p-10 lg:p-16 min-h-screen flex items-center justify-center">
-    <div class="max-w-4xl mx-auto w-full">
-        <!-- Main Title and Introduction -->
-        <h1 class="text-4xl md:text-5xl font-extrabold text-center mb-6 md:mb-8 leading-tight">
-            What You'll Learn: <span class="text-blue-400">Mastering Challenging American English Sounds</span>
-        </h1>
-        <p class="text-gray-300 text-lg md:text-xl text-center mb-10 md:mb-12 max-w-2xl mx-auto">
-            Ready to transform your American English pronunciation? Our expert-guided program focuses on the most challenging sounds that make the biggest impact on your clarity and confidence.
-        </p>
+<body class="relative">
 
-        <!-- Grid for Learning Points -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10">
-            <!-- Left Column -->
-            <div class="space-y-6 md:space-y-8">
-                <!-- Master American R sound -->
-                <div class="flex items-start bg-gray-900 p-5 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                    <span class="material-icons text-blue-400 bg-gray-800 p-3 rounded-full mr-4 flex-shrink-0 text-3xl">volume_up</span>
-                    <div>
-                        <h2 class="font-bold text-xl mb-2">Master the distinctive American R sound</h2>
-                        <p class="text-gray-400 text-base">Learn the exact tongue positioning and techniques to produce the authentic American R (/r/) in all word positions - finally eliminating that "foreign accent" giveaway that frustrates so many English learners.</p>
-                    </div>
-                </div>
-
-                <!-- Produce authentic Short O sound -->
-                <div class="flex items-start bg-gray-900 p-5 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                    <span class="material-icons text-blue-400 bg-gray-800 p-3 rounded-full mr-4 flex-shrink-0 text-3xl">mic</span>
-                    <div>
-                        <h2 class="font-bold text-xl mb-2">Produce the authentic Short O sound with confidence</h2>
-                        <p class="text-gray-400 text-base">Overcome the common confusion with similar vowels and master the precise jaw and tongue positioning for the American Short O (/ɑ/) in words like "hot," "stop," and "father."</p>
-                    </div>
-                </div>
-
-                <!-- Fix common pronunciation mistakes -->
-                <div class="flex items-start bg-gray-900 p-5 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                    <span class="material-icons text-blue-400 bg-gray-800 p-3 rounded-full mr-4 flex-shrink-0 text-3xl">close_fullscreen</span>
-                    <div>
-                        <h2 class="font-bold text-xl mb-2">Fix the most common pronunciation mistakes</h2>
-                        <p class="text-gray-400 text-base">Identify and correct specific error patterns with proven troubleshooting techniques developed by speech-language pathologists for each challenging sound.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right Column -->
-            <div class="space-y-6 md:space-y-8">
-                <!-- Train ear to hear differences -->
-                <div class="flex items-start bg-gray-900 p-5 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                    <span class="material-icons text-blue-400 bg-gray-800 p-3 rounded-full mr-4 flex-shrink-0 text-3xl">hearing</span>
-                    <div>
-                        <h2 class="font-bold text-xl mb-2">Train your ear to hear critical sound differences</h2>
-                        <p class="text-gray-400 text-base">Develop the auditory discrimination skills to recognize the subtle differences between similar sounds, allowing you to self-correct and continuously improve your pronunciation.</p>
-                    </div>
-                </div>
-
-                <!-- Perfect challenging Dark L sound -->
-                <div class="flex items-start bg-gray-900 p-5 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                    <span class="material-icons text-blue-400 bg-gray-800 p-3 rounded-full mr-4 flex-shrink-0 text-3xl">record_voice_over</span>
-                    <div>
-                        <h2 class="font-bold text-xl mb-2">Perfect the challenging Dark L sound</h2>
-                        <p class="text-gray-400 text-base">Learn the unique dual-articulation technique for the Dark L (/ɫ/) that appears at the end of words like "feel" and "ball" - a sound many non-native speakers replace with vowels or omit entirely.</p>
-                    </div>
-                </div>
-
-                <!-- Speak naturally in real-world conversations -->
-                <div class="flex items-start bg-gray-900 p-5 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-                    <span class="material-icons text-blue-400 bg-gray-800 p-3 rounded-full mr-4 flex-shrink-0 text-3xl">check_circle</span>
-                    <div>
-                        <h2 class="font-bold text-xl mb-2">Speak naturally in real-world conversations</h2>
-                        <p class="text-gray-400 text-base">Progress from isolated sounds to words, phrases, and complete sentences with our systematic practice approach, ensuring your new pronunciation skills transfer to everyday communication.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Conclusion and Call to Action -->
-        <p class="text-gray-300 text-lg md:text-xl text-center mt-12 md:mt-16 max-w-2xl mx-auto">
-            Stop struggling to be understood! With our expert-guided approach, you'll master these challenging sounds through step-by-step practice, effective self-monitoring techniques, and proven articulation methods. Speak with greater clarity and confidence in any American English context.
-        </p>
-
-        <div class="mt-10 md:mt-12 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <!-- Existing Instagram Button -->
-            <a class="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-bold py-4 px-10 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg w-full sm:w-auto text-center" href="https://www.instagram.com/channel/AbaliUMnsFr8q3G3/?igsh=ZjFwZXRlYTV0MXV3" target="_blank" rel="noopener noreferrer">
-                Join our Instagram Masterclass
-            </a>
-            <!-- New Payment Button -->
-            <a class="bg-gradient-to-r from-green-600 to-green-800 hover:from-green-700 hover:to-green-900 text-white font-bold py-4 px-10 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg w-full sm:w-auto text-center" href="google pay.jpg" target="_blank" rel="noopener noreferrer">
-                Make a Payment
-            </a>
-        </div>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
     </div>
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-black/30 backdrop-blur-md z-50 border-b border-white/10">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- Signature and Title -->
+            <div class="flex items-center space-x-4">
+                <div class="signature-font text-5xl font-bold text-white relative">
+                    R7shxd<span class="text-amber-500">.</span>
+                    <span class="absolute top-1 -right-4 text-xs font-sans text-blue-300 opacity-70"></span>
+                </div>
+                <h1 class="text-xl font-bold text-white hidden sm:block border-l border-white/20 pl-4">Accent Mastery</h1>
+            </div>
+            <!-- Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#learn" class="text-gray-300 hover:text-blue-400 transition">Features</a>
+                <a href="#curriculum" class="text-gray-300 hover:text-blue-400 transition">Curriculum</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-blue-400 transition">Testimonials</a>
+                <a href="#pricing" class="text-gray-300 hover:text-blue-400 transition">Enroll</a>
+            </nav>
+            <!-- CTA Button -->
+            <a href="#pricing" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition cta-button shadow-lg shadow-blue-500/20 hidden sm:block">
+                Enroll Now
+            </a>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section class="text-center py-20 px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-tight">
+                    Speak American English With <span class="hero-gradient-text">Total Confidence.</span>
+                </h2>
+                <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+                    Stop being misunderstood. This masterclass provides expert-led training to master the most challenging American English sounds, transforming your pronunciation and boosting your clarity.
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#pricing" class="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-800 text-white font-bold py-4 px-10 rounded-full text-xl cta-button">
+                        Start Your Transformation
+                    </a>
+                    <a href="https://www.instagram.com/channel/AbaliUMnsFr8q3G3/?igsh=ZjFwZXRlYTV0MXV3" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-gray-700/50 border border-gray-600 hover:bg-gray-700 text-white font-bold py-4 px-10 rounded-full text-xl transition duration-300">
+                        Join on Instagram
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- What You'll Learn Section -->
+        <section id="learn" class="py-20 px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white">What You'll Master</h2>
+                    <p class="mt-4 text-lg text-gray-400">A complete breakdown of the skills you'll acquire.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="feature-card p-6 rounded-2xl">
+                        <div class="text-blue-400 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.858 15.858a5 5 0 01-2.828-7.072m11.314 0a5 5 0 012.828 7.072" /></svg></div>
+                        <h3 class="font-bold text-xl text-white mb-2">The American 'R' Sound</h3>
+                        <p class="text-gray-400">Learn the exact tongue positioning to produce the authentic American /r/ in all word positions, a key to sounding native.</p>
+                    </div>
+                    <div class="feature-card p-6 rounded-2xl">
+                         <div class="text-blue-400 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg></div>
+                        <h3 class="font-bold text-xl text-white mb-2">Vowel Precision ('Short O' & 'Dark L')</h3>
+                        <p class="text-gray-400">Master the subtle jaw and tongue positions for vowels like /ɑ/ (hot, stop) and the tricky /ɫ/ (feel, ball).</p>
+                    </div>
+                    <div class="feature-card p-6 rounded-2xl">
+                         <div class="text-blue-400 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
+                        <h3 class="font-bold text-xl text-white mb-2">Natural Speech Flow</h3>
+                        <p class="text-gray-400">Go beyond single words. Learn linking, reductions, and intonation to speak smoothly and naturally in real conversations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Curriculum Section -->
+        <section id="curriculum" class="py-20 px-6 bg-black/20">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white">Course Curriculum</h2>
+                    <p class="mt-4 text-lg text-gray-400">A step-by-step journey to pronunciation mastery.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-gray-800/50 p-6 rounded-lg"><h3 class="font-bold text-xl text-blue-300">Module 1: The Foundation</h3><p class="text-gray-400 mt-2">Understanding the mechanics of American English pronunciation and training your ear to hear the key differences.</p></div>
+                    <div class="bg-gray-800/50 p-6 rounded-lg"><h3 class="font-bold text-xl text-blue-300">Module 2: Mastering the American R</h3><p class="text-gray-400 mt-2">Intensive drills and exercises for the /r/ sound at the beginning, middle, and end of words.</p></div>
+                    <div class="bg-gray-800/50 p-6 rounded-lg"><h3 class="font-bold text-xl text-blue-300">Module 3: Vowel Mastery</h3><p class="text-gray-400 mt-2">Targeted practice for the Short O (/ɑ/), Dark L (/ɫ/), and other commonly confused vowel sounds.</p></div>
+                    <div class="bg-gray-800/50 p-6 rounded-lg"><h3 class="font-bold text-xl text-blue-300">Module 4: Rhythm and Melody</h3><p class="text-gray-400 mt-2">Learning the stress, intonation, and rhythm patterns that make your speech sound natural and engaging.</p></div>
+                    <div class="bg-gray-800/50 p-6 rounded-lg"><h3 class="font-bold text-xl text-blue-300">Module 5: Real-World Application</h3><p class="text-gray-400 mt-2">Applying your new skills to phrases, sentences, and conversational practice scenarios.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white">Success Stories from Learners Like You</h2>
+                    <p class="mt-4 text-lg text-gray-400">Join 10,000+ happy learners! (Average 4.8 Stars from 900+ ratings)</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card p-6 rounded-2xl flex flex-col">
+                        <div class="flex items-center mb-2">
+                            <span class="text-yellow-400">★★★★★</span>
+                        </div>
+                        <p class="text-gray-300 italic flex-grow">"My thick accent always made me hesitant to speak in meetings. This course was a game-changer. The focus on 'R' and 'L' sounds, which are so tough for Hindi speakers, was perfect. I finally feel heard."</p>
+                        <div class="mt-4 flex items-center">
+                            <img src="https://placehold.co/40x40/60a5fa/ffffff?text=RK" alt="Student Avatar" class="rounded-full mr-4">
+                            <div><p class="font-bold text-white">Rohan K.</p><p class="text-sm text-gray-400">IT Consultant, India</p></div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card p-6 rounded-2xl flex flex-col">
+                        <div class="flex items-center mb-2"><span class="text-yellow-400">★★★★★</span></div>
+                        <p class="text-gray-300 italic flex-grow">"As an Arab speaker, American vowels were my biggest challenge. The visual aids and step-by-step drills in this masterclass made everything click. My American clients have noticed the difference."</p>
+                        <div class="mt-4 flex items-center">
+                            <img src="https://placehold.co/40x40/8b5cf6/ffffff?text=FA" alt="Student Avatar" class="rounded-full mr-4">
+                            <div><p class="font-bold text-white">Fatima A.</p><p class="text-sm text-gray-400">Architect, UAE</p></div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card p-6 rounded-2xl flex flex-col">
+                        <div class="flex items-center mb-2"><span class="text-yellow-400">★★★★★</span></div>
+                        <p class="text-gray-300 italic flex-grow">"I can't believe the progress I've made. The course directly addresses the common mistakes we Indians make with word stress and rhythm. I now speak with a flow I never thought possible."</p>
+                        <div class="mt-4 flex items-center">
+                            <img src="https://placehold.co/40x40/10b981/ffffff?text=PS" alt="Student Avatar" class="rounded-full mr-4">
+                            <div><p class="font-bold text-white">Priya S.</p><p class="text-sm text-gray-400">Marketing Manager, India</p></div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card p-6 rounded-2xl flex flex-col">
+                        <div class="flex items-center mb-2"><span class="text-yellow-400">★★★★★</span></div>
+                        <p class="text-gray-300 italic flex-grow">"The 1-on-1 session was invaluable. Getting personalized feedback on my specific pronunciation of 'th' and 'v' sounds, which are difficult for Arabic speakers, accelerated my learning immensely."</p>
+                        <div class="mt-4 flex items-center">
+                            <img src="https://placehold.co/40x40/f59e0b/ffffff?text=ME" alt="Student Avatar" class="rounded-full mr-4">
+                            <div><p class="font-bold text-white">Mohammed E.</p><p class="text-sm text-gray-400">University Student, Egypt</p></div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-card p-6 rounded-2xl flex flex-col">
+                        <div class="flex items-center mb-2"><span class="text-yellow-400">★★★★★</span></div>
+                        <p class="text-gray-300 italic flex-grow">"This is more than just a course; it's a confidence booster. I no longer have to repeat myself constantly. The 'Little Language Lessons' are perfect for daily practice on my commute."</p>
+                        <div class="mt-4 flex items-center">
+                            <img src="https://placehold.co/40x40/ef4444/ffffff?text=AK" alt="Student Avatar" class="rounded-full mr-4">
+                            <div><p class="font-bold text-white">Anjali K.</p><p class="text-sm text-gray-400">Data Scientist, India</p></div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 6 -->
+                    <div class="testimonial-card p-6 rounded-2xl flex flex-col">
+                        <div class="flex items-center mb-2"><span class="text-yellow-400">★★★★★</span></div>
+                        <p class="text-gray-300 italic flex-grow">"Finally, a course that understands the specific challenges for Arabic speakers. The distinction between 'p' and 'b' sounds was explained so clearly. Highly recommended."</p>
+                        <div class="mt-4 flex items-center">
+                            <img src="https://placehold.co/40x40/3b82f6/ffffff?text=YA" alt="Student Avatar" class="rounded-full mr-4">
+                            <div><p class="font-bold text-white">Youssef A.</p><p class="text-sm text-gray-400">Financial Analyst, KSA</p></div>
+                        </div>
+                    </div>
+                     <!-- Testimonial 7 -->
+                     <div class="testimonial-card p-6 rounded-2xl flex flex-col">
+                        <div class="flex items-center mb-2"><span class="text-yellow-400">★★★★★</span></div>
+                        <p class="text-gray-300 italic flex-grow">"The best $10 I have ever spent on my education. The value is incredible. My pronunciation of complex words has improved dramatically, and my confidence is through the roof."</p>
+                        <div class="mt-4 flex items-center">
+                            <img src="https://placehold.co/40x40/6d28d9/ffffff?text=VJ" alt="Student Avatar" class="rounded-full mr-4">
+                            <div><p class="font-bold text-white">Vikram J.</p><p class="text-sm text-gray-400">Doctor, India</p></div>
+                        </div>
+                    </div>
+                      <!-- Testimonial 8 -->
+                      <div class="testimonial-card p-6 rounded-2xl flex flex-col">
+                        <div class="flex items-center mb-2"><span class="text-yellow-400">★★★★★</span></div>
+                        <p class="text-gray-300 italic flex-grow">"I was always self-conscious about my accent when speaking with my international team. After this course, I can lead presentations clearly and effectively. The results are real."</p>
+                        <div class="mt-4 flex items-center">
+                            <img src="https://placehold.co/40x40/db2777/ffffff?text=NH" alt="Student Avatar" class="rounded-full mr-4">
+                            <div><p class="font-bold text-white">Nour H.</p><p class="text-sm text-gray-400">HR Manager, Jordan</p></div>
+                        </div>
+                    </div>
+                      <!-- Testimonial 9 -->
+                      <div class="testimonial-card p-6 rounded-2xl flex flex-col">
+                        <div class="flex items-center mb-2"><span class="text-yellow-400">★★★★★</span></div>
+                        <p class="text-gray-300 italic flex-grow">"The curriculum is perfectly structured. It builds your skills logically from sounds to full sentences. I recommend this to any Indian professional looking to work in the US."</p>
+                        <div class="mt-4 flex items-center">
+                            <img src="https://placehold.co/40x40/16a34a/ffffff?text=SP" alt="Student Avatar" class="rounded-full mr-4">
+                            <div><p class="font-bold text-white">Sandeep P.</p><p class="text-sm text-gray-400">Engineer, India</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing/Enrollment Section -->
+        <section id="pricing" class="py-20 px-6 bg-black/20">
+            <div class="max-w-md mx-auto text-center">
+                 <h2 class="text-4xl md:text-5xl font-bold text-white">Ready to Master Your Accent?</h2>
+                 <p class="mt-4 text-lg text-yellow-300 font-semibold animate-pulse">Limited Time Offer: 50% OFF for the next 3 slots!</p>
+                 <div class="my-8">
+                     <span class="text-6xl font-extrabold text-white">$9.99</span>
+                     <span class="text-gray-400 mx-2">/</span>
+                     <span class="text-6xl font-extrabold text-white">₹999</span>
+                 </div>
+                 <div class="feature-card p-6 rounded-lg text-left space-y-3 mb-8">
+                     <p class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>Lifetime Access to All Study Material</p>
+                     <p class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>1-on-1 Live Masterclass Session</p>
+                     <p class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>99+ Little Language Lessons</p>
+                     <p class="flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>Access to Private Community</p>
+                 </div>
+                 <a href="google pay.jpg" target="_blank" rel="noopener noreferrer" class="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold py-4 px-10 rounded-full text-xl cta-button">
+                     Enroll Now & Claim Your Spot
+                 </a>
+                 <div class="mt-6">
+                     <p class="text-sm text-gray-400 mb-2">Secure & Easy Enrollment</p>
+                     <div class="flex justify-center items-center space-x-4">
+                         <img src="https://www.vectorlogo.zone/logos/paypal/paypal-ar21.svg" alt="PayPal" class="h-8 bg-white p-1 rounded">
+                         <img src="https://www.vectorlogo.zone/logos/upi/upi-ar21.svg" alt="UPI" class="h-10 bg-white p-1 rounded">
+                     </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 px-6">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white">Frequently Asked Questions</h2>
+                </div>
+                <div class="space-y-4" id="faq-container">
+                    <div class="faq-item pt-4">
+                        <button class="faq-question w-full flex justify-between items-center text-left text-xl font-semibold text-white pb-4"><span>Is this course effective for native Hindi/Arabic speakers?</span><svg class="w-6 h-6 transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></button>
+                        <div class="faq-answer text-gray-400 pb-4 pr-6">Absolutely. The course is specifically designed to target the most common pronunciation challenges faced by speakers of Indian and Arabic languages, such as the American 'R', 'W' vs. 'V' sounds, specific vowels, and sentence rhythm.</div>
+                    </div>
+                    <div class="faq-item pt-4">
+                        <button class="faq-question w-full flex justify-between items-center text-left text-xl font-semibold text-white pb-4"><span>How does the 1-on-1 session work?</span><svg class="w-6 h-6 transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></button>
+                        <div class="faq-answer text-gray-400 pb-4 pr-6">After you enroll, you'll receive a link to schedule your 90-minute live video session with the instructors. During the session, you'll get personalized feedback, targeted drills for your specific problem areas, and a custom practice plan.</div>
+                    </div>
+                    <div class="faq-item pt-4">
+                        <button class="faq-question w-full flex justify-between items-center text-left text-xl font-semibold text-white pb-4"><span>What kind of study materials are included?</span><svg class="w-6 h-6 transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></button>
+                        <div class="faq-answer text-gray-400 pb-4 pr-6">You get lifetime access to all modules, downloadable files for practicing on the go, PDF worksheets with drill lists and exercises, and the "99+ Little Language Lessons" which are short, focused Language Lessons.</div>
+                    </div>
+                    <div class="faq-item pt-4">
+                        <button class="faq-question w-full flex justify-between items-center text-left text-xl font-semibold text-white pb-4"><span>How long will it take to see results?</span><svg class="w-6 h-6 transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></button>
+                        <div class="faq-answer text-gray-400 pb-4 pr-6">Results vary, but with consistent practice (we recommend 15-20 minutes per day), many students report noticeable improvements in their target sounds within 2-3 weeks and significant gains in confidence and clarity after completing the Masterclass.</div>
+                    </div>
+                    <div class="faq-item pt-4">
+                        <button class="faq-question w-full flex justify-between items-center text-left text-xl font-semibold text-white pb-4"><span>What happens after I enroll?</span><svg class="w-6 h-6 transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></button>
+                        <div class="faq-answer text-gray-400 pb-4 pr-6">Immediately after your enrollment, you will receive an email with the instructions on how to join the private community and schedule your 1-on-1 session.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/40 border-t border-white/10 mt-20">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <p>&copy; 2025 Accent Mastery. All Rights Reserved.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+        
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for FAQ accordion
+        const faqContainer = document.getElementById('faq-container');
+
+        if (faqContainer) {
+            faqContainer.addEventListener('click', function(e) {
+                const questionButton = e.target.closest('.faq-question');
+                if (!questionButton) return;
+
+                const answer = questionButton.nextElementSibling;
+                const icon = questionButton.querySelector('svg');
+
+                // Close all other open FAQs
+                const allQuestions = faqContainer.querySelectorAll('.faq-question');
+                allQuestions.forEach(q => {
+                    const ans = q.nextElementSibling;
+                    const icn = q.querySelector('svg');
+                    if (ans !== answer && ans.style.maxHeight) {
+                        ans.style.maxHeight = null;
+                        icn.style.transform = 'rotate(0deg)';
+                    }
+                });
+                
+                // Toggle the clicked FAQ
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
