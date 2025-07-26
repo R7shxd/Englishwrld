@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Accent Mastery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050816;
+            color: #e2e8f0;
+        }
+        .signature-font {
+            font-family: 'Dancing Script', cursive;
+        }
+        .payment-card {
+            background: rgba(17, 24, 39, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .payment-button {
+            transition: all 0.3s ease-in-out;
+        }
+        .payment-button:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+        .background-blobs {
+            position: fixed; /* Use fixed so it stays during scroll on small screens */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.15;
+        }
+        .blob-1 {
+            background: #3b82f6;
+            width: 400px;
+            height: 400px;
+            top: -150px;
+            left: -150px;
+            animation: move-blob-1 15s infinite alternate;
+        }
+        .blob-2 {
+            background: #8b5cf6;
+            width: 300px;
+            height: 300px;
+            bottom: -100px;
+            right: -100px;
+            animation: move-blob-2 20s infinite alternate;
+        }
+        @keyframes move-blob-1 {
+            from { transform: translate(0, 0) scale(1); }
+            to { transform: translate(100px, 50px) scale(1.2); }
+        }
+        @keyframes move-blob-2 {
+            from { transform: translate(0, 0) scale(1); }
+            to { transform: translate(-80px, -60px) scale(0.8); }
+        }
+    </style>
+</head>
+<body class="relative">
+
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="min-h-screen flex flex-col items-center justify-center p-4">
+        
+        <div class="text-center mb-6">
+            <div class="flex items-center justify-center space-x-4">
+                <div class="signature-font text-5xl font-bold text-white relative">
+                    R7shxd<span class="text-amber-500">.</span>
+                </div>
+                <h1 class="text-2xl font-bold text-white border-l border-white/20 pl-4">Accent Mastery</h1>
+            </div>
+        </div>
+
+        <div class="payment-card w-full max-w-2xl rounded-2xl p-6 md:p-8 shadow-2xl">
+            <h2 class="text-3xl font-bold text-center text-white mb-2">Complete Your Enrollment</h2>
+            <p class="text-center text-gray-300 mb-6">You're one step away from transforming your accent!</p>
+
+            <div class="bg-gray-900/50 rounded-lg p-4 mb-6 text-center">
+                <p class="text-lg text-gray-400">Total Amount</p>
+                <div>
+                    <span class="text-4xl font-extrabold text-white">$9.99</span>
+                    <span class="text-gray-400 mx-2 text-2xl">/</span>
+                    <span class="text-4xl font-extrabold text-white">₹999</span>
+                </div>
+            </div>
+
+            <!-- Indian Payments -->
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-blue-300 mb-4 text-center border-b border-gray-700 pb-2">For Payments in India (UPI)</h3>
+                <div class="flex flex-col md:flex-row items-center gap-6">
+                    <div class="text-center">
+                        <p class="text-sm font-medium mb-2">Scan QR to Pay</p>
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=upi://pay?pa=abdul.zatak123@oksbi%26pn=EnglishWRLD%26am=999.00%26cu=INR%26tn=Accent%2520Mastery" alt="UPI QR Code" class="rounded-lg bg-white p-1 mx-auto">
+                    </div>
+                    <div class="w-full md:w-auto flex-grow text-center md:text-left">
+                        <p class="text-sm font-medium mb-3">Or pay directly using your favorite app:</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <a href="gpay://upi/pay?pa=abdul.zatak123@oksbi&pn=EnglishWRLD&am=999.00&cu=INR&tn=Accent%20Mastery" class="payment-button flex items-center justify-center bg-white font-semibold py-3 px-4 rounded-lg">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Google_Pay_Logo.svg" alt="Google Pay Logo" class="h-6">
+                            </a>
+                            <a href="phonepe://upi/pay?pa=abdul.zatak123@oksbi&pn=EnglishWRLD&am=999.00&cu=INR&tn=Accent%20Mastery" class="payment-button flex items-center justify-center bg-white py-3 px-4 rounded-lg">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/PhonePe_Logo.svg" alt="PhonePe Logo" class="h-6">
+                            </a>
+                             <a href="paytmmp://upi/pay?pa=abdul.zatak123@oksbi&pn=EnglishWRLD&am=999.00&cu=INR&tn=Accent%20Mastery" class="payment-button flex items-center justify-center bg-white py-3 px-4 rounded-lg">
+                                <img src="https://pwebassets.paytm.com/commonwebassets/paytmweb/header/images/logo_new.svg" alt="Paytm Logo" class="h-5">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- International Payments -->
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-purple-300 mb-4 text-center border-b border-gray-700 pb-2">For International Payments</h3>
+                <a href="#" class="payment-button w-full flex items-center justify-center bg-white py-3 px-5 rounded-lg">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Paypal_2014_logo.png" alt="PayPal Logo" class="h-7">
+                </a>
+            </div>
+
+            <!-- After Payment Instructions -->
+            <div class="bg-yellow-900/40 border border-yellow-500/50 rounded-lg p-4 mt-8">
+                <h4 class="font-bold text-yellow-300 text-lg text-center">✅ Important: Final Step!</h4>
+                <p class="text-yellow-200 mt-2 text-center">After completing the payment, please send a screenshot of the transaction receipt to us via WhatsApp or Email to get instant access to the community.</p>
+                <div class="mt-4 flex flex-col sm:flex-row justify-center items-center gap-4 text-center">
+                    <p class="font-semibold">WhatsApp: <a href="https://wa.me/+917860416367" target="_blank" class="text-white underline hover:text-blue-300">+917860416367</a></p>
+                    <p class="font-semibold">Email: <a href="https://mailto:r7shxd.wrld@gmail.com" class="text-white underline hover:text-blue-300">r7shxd.wrld@gmail.com</a></p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-8 text-center">
+            <a href="index.html" class="text-gray-400 hover:text-white transition underline">← Go back to the main page</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
