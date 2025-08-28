@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment - Accent Mastery</title>
+    <title>Complete Your Enrollment - Accent Mastery</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +31,7 @@
             filter: brightness(1.1);
         }
         .background-blobs {
-            position: fixed; /* Use fixed so it stays during scroll on small screens */
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
@@ -78,70 +78,109 @@
         <div class="blob blob-2"></div>
     </div>
 
-    <div class="min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="min-h-screen flex flex-col items-center justify-center p-4 py-12">
         
-        <div class="text-center mb-6">
-            <div class="flex items-center justify-center space-x-4">
-                <div class="signature-font text-5xl font-bold text-white relative">
-                    R7shxd<span class="text-amber-500">.</span>
+        <div class="text-center mb-8">
+            <a href="index.html" class="inline-block">
+                <div class="flex items-center justify-center space-x-4">
+                    <div class="signature-font text-5xl font-bold text-white relative">
+                        R7shxd<span class="text-amber-500">.</span>
+                    </div>
+                    <h1 class="text-2xl font-bold text-white border-l border-white/20 pl-4">Accent Mastery</h1>
                 </div>
-                <h1 class="text-2xl font-bold text-white border-l border-white/20 pl-4">Accent Mastery</h1>
-            </div>
+            </a>
+            <p class="text-gray-300 mt-2 text-lg">You're just one step away from total confidence.</p>
         </div>
 
-        <div class="payment-card w-full max-w-2xl rounded-2xl p-6 md:p-8 shadow-2xl">
-            <h2 class="text-3xl font-bold text-center text-white mb-2">Complete Your Enrollment</h2>
-            <p class="text-center text-gray-300 mb-6">You're one step away from transforming your accent!</p>
-
-            <div class="bg-gray-900/50 rounded-lg p-4 mb-6 text-center">
-                <p class="text-lg text-gray-400">Total Amount</p>
-                <div>
-                    <span class="text-4xl font-extrabold text-white">$9.99</span>
-                    <span class="text-gray-400 mx-2 text-2xl">/</span>
-                    <span class="text-4xl font-extrabold text-white">₹999</span>
-                </div>
-            </div>
-
-            <!-- Indian Payments -->
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold text-blue-300 mb-4 text-center border-b border-gray-700 pb-2">For Payments in India (UPI)</h3>
-                <div class="flex flex-col md:flex-row items-center gap-6">
-                    <div class="text-center">
-                        <p class="text-sm font-medium mb-2">Scan QR to Pay</p>
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=upi://pay?pa=abdul.zatak123@oksbi%26pn=EnglishWRLD%26am=999.00%26cu=INR%26tn=Accent%2520Mastery" alt="UPI QR Code" class="rounded-lg bg-white p-1 mx-auto">
+        <div class="w-full max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-8">
+            
+            <!-- Left Column: Order Summary -->
+            <div class="lg:col-span-2">
+                <div class="payment-card rounded-2xl p-6 md:p-8 shadow-2xl h-full flex flex-col">
+                    <h2 class="text-2xl font-bold text-white mb-4">Your Masterclass Bundle</h2>
+                    
+                    <div class="border-t border-b border-gray-700 py-4 my-4">
+                        <div class="flex justify-between items-center text-gray-400">
+                            <span>Original Price</span>
+                            <span><span class="line-through">$19.99</span> / <span class="line-through">₹1999</span></span>
+                        </div>
+                        <div class="flex justify-between items-center text-green-400 mt-2">
+                            <span class="font-semibold">50% OFF Discount</span>
+                            <span class="font-semibold">- $10 / - ₹1000</span>
+                        </div>
+                        <div class="flex justify-between items-baseline text-white mt-4 pt-4 border-t border-gray-700">
+                            <span class="text-lg font-bold">Total Due Today</span>
+                            <span class="text-3xl font-extrabold">$9.99 / ₹999</span>
+                        </div>
                     </div>
-                    <div class="w-full md:w-auto flex-grow text-center md:text-left">
-                        <p class="text-sm font-medium mb-3">Or pay directly using your favorite app:</p>
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                            <a href="gpay://upi/pay?pa=abdul.zatak123@oksbi&pn=EnglishWRLD&am=999.00&cu=INR&tn=Accent%20Mastery" class="payment-button flex items-center justify-center bg-white font-semibold py-3 px-4 rounded-lg">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Google_Pay_Logo.svg" alt="Google Pay Logo" class="h-6">
-                            </a>
-                            <a href="phonepe://upi/pay?pa=abdul.zatak123@oksbi&pn=EnglishWRLD&am=999.00&cu=INR&tn=Accent%20Mastery" class="payment-button flex items-center justify-center bg-white py-3 px-4 rounded-lg">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/PhonePe_Logo.svg" alt="PhonePe Logo" class="h-6">
-                            </a>
-                             <a href="paytmmp://upi/pay?pa=abdul.zatak123@oksbi&pn=EnglishWRLD&am=999.00&cu=INR&tn=Accent%20Mastery" class="payment-button flex items-center justify-center bg-white py-3 px-4 rounded-lg">
-                                <img src="https://pwebassets.paytm.com/commonwebassets/paytmweb/header/images/logo_new.svg" alt="Paytm Logo" class="h-5">
-                            </a>
+
+                    <h3 class="font-semibold text-white mt-4 mb-3">Here's everything you get:</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-400 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg><span><b>Lifetime Access</b> to All Study Material</span></li>
+                        <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-400 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg><span><b>1-on-1 Live</b> Masterclass Session</span></li>
+                        <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-400 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg><span><b>99+</b> Little Language Lessons for Daily Practice</span></li>
+                        <li class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-green-400 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg><span>Access to the <b>Private Community</b></span></li>
+                    </ul>
+                    
+                    <div class="mt-auto pt-8">
+                        <div class="bg-gray-800/50 border border-blue-400/30 rounded-lg p-4 flex items-start space-x-4">
+                            <svg class="h-10 w-10 text-blue-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                            <div class="text-left">
+                                <h4 class="font-bold text-white">30-Day Money-Back Guarantee</h4>
+                                <p class="text-sm text-gray-400 mt-1">If you're not satisfied, get a full refund. No questions asked.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- International Payments -->
-            <div class="mb-6">
+            <!-- Right Column: Payment Methods -->
+            <div class="lg:col-span-3">
+                <div class="payment-card rounded-2xl p-6 md:p-8 shadow-2xl">
+                    <h2 class="text-3xl font-bold text-center text-white mb-4">Choose Your Payment Method</h2>
+                    
+                    <div class="flex justify-center items-center space-x-2 text-sm text-gray-400 mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-green-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" /></svg>
+                        <span>SSL Secure Payment</span>
+                    </div>
+
+                    <!-- Indian Payments -->
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-blue-300 mb-4 text-center border-b border-gray-700 pb-2">For Payments in India (UPI)</h3>
+                        <div class="flex flex-col md:flex-row items-center gap-6">
+                            <div class="text-center">
+                                <p class="text-sm font-medium mb-2">Scan QR to Pay ₹999</p>
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=upi://pay?pa=abdul.zatak123@oksbi%26pn=EnglishWRLD%26am=999.00%26cu=INR%26tn=Accent%2520Mastery" alt="UPI QR Code" class="rounded-lg bg-white p-1 mx-auto">
+                            </div>
+                            <div class="w-full md:w-auto flex-grow text-center md:text-left">
+                                <p class="text-sm font-medium mb-3">Or pay directly using your favorite app:</p>
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                    <a href="gpay://upi/pay?pa=abdul.zatak123@oksbi&pn=EnglishWRLD&am=999.00&cu=INR&tn=Accent%20Mastery" class="payment-button flex items-center justify-center bg-white font-semibold py-3 px-4 rounded-lg"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Google_Pay_Logo.svg" alt="Google Pay Logo" class="h-6"></a>
+                                    <a href="phonepe://upi/pay?pa=abdul.zatak123@oksbi&pn=EnglishWRLD&am=999.00&cu=INR&tn=Accent%20Mastery" class="payment-button flex items-center justify-center bg-white py-3 px-4 rounded-lg"><img src="https://upload.wikimedia.org/wikipedia/commons/7/71/PhonePe_Logo.svg" alt="PhonePe Logo" class="h-6"></a>
+                                    <a href="paytmmp://upi/pay?pa=abdul.zatak123@oksbi&pn=EnglishWRLD&am=999.00&cu=INR&tn=Accent%20Mastery" class="payment-button flex items-center justify-center bg-white py-3 px-4 rounded-lg"><img src="https://pwebassets.paytm.com/commonwebassets/paytmweb/header/images/logo_new.svg" alt="Paytm Logo" class="h-5"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- International Payments -->
+                    <div class="mb-6">
                 <h3 class="text-xl font-semibold text-purple-300 mb-4 text-center border-b border-gray-700 pb-2">For International Payments</h3>
                 <a href="#" class="payment-button w-full flex items-center justify-center bg-white py-3 px-5 rounded-lg">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Paypal_2014_logo.png" alt="PayPal Logo" class="h-7">
                 </a>
             </div>
+                    
+                    <!-- After Payment Instructions -->
+                    <div class="bg-yellow-900/40 border border-yellow-500/50 rounded-lg p-4 mt-8">
+                        <h4 class="font-bold text-yellow-300 text-lg text-center">✅ Important: Final Step!</h4>
+                        <p class="text-yellow-200 mt-2 text-center text-sm">After payment, send a receipt screenshot to us on WhatsApp or Email to get instant course access.</p>
+                        <div class="mt-4 flex flex-col sm:flex-row justify-center items-center gap-x-4 gap-y-2 text-center">
+                            <p class="font-semibold text-sm">WhatsApp: <a href="https://wa.me/+917860416367" target="_blank" class="text-white underline hover:text-blue-300">+917860416367</a></p>
+                            <p class="font-semibold text-sm">Email: <a href="mailto:r7shxd.wrld@gmail.com" class="text-white underline hover:text-blue-300">r7shxd.wrld@gmail.com</a></p>
+                        </div>
+                    </div>
 
-            <!-- After Payment Instructions -->
-            <div class="bg-yellow-900/40 border border-yellow-500/50 rounded-lg p-4 mt-8">
-                <h4 class="font-bold text-yellow-300 text-lg text-center">✅ Important: Final Step!</h4>
-                <p class="text-yellow-200 mt-2 text-center">After completing the payment, please send a screenshot of the transaction receipt to us via WhatsApp or Email to get instant access to the community.</p>
-                <div class="mt-4 flex flex-col sm:flex-row justify-center items-center gap-4 text-center">
-                    <p class="font-semibold">WhatsApp: <a href="https://wa.me/+917860416367" target="_blank" class="text-white underline hover:text-blue-300">+917860416367</a></p>
-                    <p class="font-semibold">Email: <a href="https://mailto:r7shxd.wrld@gmail.com" class="text-white underline hover:text-blue-300">r7shxd.wrld@gmail.com</a></p>
                 </div>
             </div>
 
